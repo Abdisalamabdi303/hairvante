@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import logo from "@/assets/hairvante-logo.png";
 
 const Hero = () => {
   const handleWhatsAppClick = () => {
@@ -20,9 +21,13 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
-          <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6 text-background">
-            <span className="text-primary">Hair</span>Vante
-          </h1>
+          <div className="mb-8">
+            <img 
+              src={logo} 
+              alt="HairVante - Premium Hair Transplant Turkey" 
+              className="h-20 md:h-28 w-auto"
+            />
+          </div>
           <h2 className="font-playfair text-3xl md:text-5xl font-semibold mb-6 text-background">
             Restore Your Confidence with World-Class Hair Restoration
           </h2>
