@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import logo from "@/assets/hairvante-logo.png";
 
 const Footer = () => {
   return (
@@ -6,9 +7,11 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="font-playfair text-2xl font-bold mb-4">
-              <span className="text-primary">Hair</span>Vante
-            </h3>
+            <img 
+              src={logo} 
+              alt="HairVante Logo" 
+              className="h-12 w-auto mb-4"
+            />
             <p className="text-background/80 mb-4">
               Turkey's premier destination for world-class hair restoration. 
               Restoring confidence through excellence in hair transplant surgery.
