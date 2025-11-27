@@ -36,65 +36,68 @@ const Process = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4 text-foreground">
+    <section className="relative isolate overflow-hidden py-24">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#080604] via-[#050505] to-[#080604]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(249,216,140,0.09),transparent_60%)]" />
+
+      <div className="relative z-10 mx-auto max-w-5xl px-4">
+        <div className="text-center">
+          <p className="text-xs uppercase tracking-[0.5em] text-primary/80">Process</p>
+          <h2 className="font-playfair text-4xl text-white md:text-5xl">
             Your Hair Restoration <span className="text-primary">Journey</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From consultation to final results, we guide you through every step of your transformation 
-            with expert care and unwavering support.
+          <p className="mx-auto mt-4 max-w-3xl text-lg text-white/70">
+            Every milestone is choreographed for ease—from the first consultation to the final follow-up.
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto space-y-6">
+        <div className="mt-16 space-y-6">
           {steps.map((step, index) => (
-            <Card key={index} className="border-l-4 border-l-primary shadow-lg hover:shadow-xl transition-shadow">
+            <Card
+              key={index}
+              className="rounded-[28px] border border-white/10 bg-white/5 text-white shadow-[0_35px_120px_-60px_rgba(0,0,0,1)]"
+            >
               <CardHeader>
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center">
-                    <step.icon className="h-7 w-7 text-primary" />
+                  <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
+                    <step.icon className="h-7 w-7" />
                   </div>
                   <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-primary text-primary-foreground font-bold text-sm">
+                    <div className="mb-2 flex items-center gap-3">
+                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
                         {index + 1}
                       </span>
-                      <CardTitle className="text-2xl font-playfair">{step.title}</CardTitle>
+                      <CardTitle className="font-playfair text-2xl text-white">{step.title}</CardTitle>
                     </div>
-                    <span className="text-sm text-primary font-semibold">{step.duration}</span>
+                    <span className="text-sm font-semibold text-primary">{step.duration}</span>
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground leading-relaxed pl-[72px]">{step.description}</p>
+                <p className="pl-[72px] text-white/70">{step.description}</p>
               </CardContent>
             </Card>
           ))}
         </div>
 
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="font-playfair text-2xl md:text-3xl font-bold mb-4 text-foreground">
-              Ready to Start Your Transformation?
-            </h3>
-            <p className="text-lg text-muted-foreground mb-6">
-              Our patient coordinators are available 24/7 to answer your questions and schedule your free consultation. 
-              Take the first step towards regaining your confidence today.
+          <div className="rounded-[32px] border border-white/10 bg-white/5 p-8 shadow-[0_35px_120px_-60px_rgba(0,0,0,1)]">
+            <h3 className="font-playfair text-3xl text-white md:text-4xl">Ready to Start Your Transformation?</h3>
+            <p className="mx-auto mt-4 max-w-3xl text-white/70">
+              Our patient coordinators are available 24/7 to answer your questions and schedule your free consultation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://wa.me/905438611089" 
-                target="_blank" 
+            <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+              <a
+                href="https://wa.me/905438611089"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
+                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#f8d88d] to-[#b8802a] px-10 py-3 text-sm font-semibold text-black shadow-[0_25px_80px_-40px_rgba(248,216,141,1)] transition hover:scale-105"
               >
                 Contact via WhatsApp
               </a>
-              <button 
-                onClick={() => document.getElementById('consultation')?.scrollIntoView({ behavior: 'smooth' })}
-                className="inline-flex items-center justify-center px-8 py-3 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold rounded-lg transition-all"
+              <button
+                onClick={() => document.getElementById("consultation")?.scrollIntoView({ behavior: "smooth" })}
+                className="inline-flex items-center justify-center rounded-full border border-white/30 px-10 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
               >
                 Request Free Analysis
               </button>

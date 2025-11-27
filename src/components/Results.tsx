@@ -37,98 +37,94 @@ const Results = () => {
   ];
 
   return (
-    <section id="results" className="py-20 bg-secondary/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Real <span className="text-primary">Results</span>
+    <section id="results" className="relative isolate overflow-hidden py-24">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#090604] via-[#050505] to-[#0a0806]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(249,216,140,0.12),transparent_55%)]" />
+
+      <div className="relative z-10 mx-auto max-w-6xl px-4">
+        <div className="text-center">
+          <p className="text-xs uppercase tracking-[0.5em] text-primary/80">Our Craft</p>
+          <h2 className="font-playfair text-4xl text-white md:text-5xl">
+            Real <span className="text-primary">Results</span> That Inspire Confidence
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            See the incredible transformations of our clients. These authentic before, during treatment, and after photos showcase the quality of our work.
+          <p className="mx-auto mt-4 max-w-2xl text-white/70">
+            Authentic before, treatment, and after journeys highlighting the precision our surgeons bring to every graft.
           </p>
         </div>
 
         {/* Featured Video */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-auto object-cover"
-            >
+        <div className="mx-auto mt-16 max-w-4xl">
+          <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-black/40 shadow-[0_45px_120px_-60px_rgba(0,0,0,1)]">
+            <video autoPlay loop muted playsInline className="h-full w-full object-cover">
               <source src="/videos/treatment-video.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
           </div>
-          <p className="text-center text-muted-foreground mt-4 text-sm">
-            Watch our treatment process in action
-          </p>
+          <p className="mt-4 text-center text-sm text-white/70">Watch our treatment process in action</p>
         </div>
 
-        <div className="space-y-16">
+        <div className="mt-16 space-y-16">
           {transformations.map((transformation, index) => (
-            <div key={index} className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div key={index}>
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
                 {/* Before */}
                 <div className="group relative">
-                  <div className="relative overflow-hidden rounded-2xl shadow-lg">
+                  <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-black/40 shadow-[0_30px_80px_-45px_rgba(0,0,0,1)]">
                     <img
                       src={transformation.before}
                       alt={`${transformation.name} before treatment`}
-                      className="w-full h-80 md:h-96 object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      className="h-80 w-full object-cover object-top transition-transform duration-500 group-hover:scale-105 md:h-96"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <span className="inline-block bg-destructive/90 text-destructive-foreground px-4 py-2 rounded-full text-sm font-semibold mb-2">
+                    <div className="absolute inset-x-0 bottom-0 p-6">
+                      <span className="mb-2 inline-block rounded-full bg-red-500/90 px-4 py-2 text-sm font-semibold text-white">
                         Before
                       </span>
-                      <p className="text-white/90 text-sm">Initial consultation</p>
+                      <p className="text-sm text-white/85">Initial consultation</p>
                     </div>
                   </div>
                 </div>
 
                 {/* During Treatment */}
                 <div className="group relative">
-                  <div className="relative overflow-hidden rounded-2xl shadow-lg">
+                  <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-black/40 shadow-[0_30px_80px_-45px_rgba(0,0,0,1)]">
                     <img
                       src={transformation.treatment}
                       alt={`${transformation.name} during treatment`}
-                      className="w-full h-80 md:h-96 object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      className="h-80 w-full object-cover object-top transition-transform duration-500 group-hover:scale-105 md:h-96"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <span className="inline-block bg-primary/90 text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold mb-2">
+                    <div className="absolute inset-x-0 bottom-0 p-6">
+                      <span className="mb-2 inline-block rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground">
                         Treatment
                       </span>
-                      <p className="text-white/90 text-sm">{transformation.grafts}</p>
+                      <p className="text-sm text-white/85">{transformation.grafts}</p>
                     </div>
                   </div>
                 </div>
 
                 {/* After */}
                 <div className="group relative">
-                  <div className="relative overflow-hidden rounded-2xl shadow-lg">
+                  <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-black/40 shadow-[0_30px_80px_-45px_rgba(0,0,0,1)]">
                     <img
                       src={transformation.after}
                       alt={`${transformation.name} after treatment`}
-                      className="w-full h-80 md:h-96 object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      className="h-80 w-full object-cover object-top transition-transform duration-500 group-hover:scale-105 md:h-96"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <span className="inline-block bg-green-600/90 text-white px-4 py-2 rounded-full text-sm font-semibold mb-2">
+                    <div className="absolute inset-x-0 bottom-0 p-6">
+                      <span className="mb-2 inline-block rounded-full bg-emerald-500/90 px-4 py-2 text-sm font-semibold text-white">
                         After
                       </span>
-                      <p className="text-white/90 text-sm">12 months post-procedure</p>
+                      <p className="text-sm text-white/85">12 months post-procedure</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="text-center mt-8">
-                <p className="text-muted-foreground">
-                  <span className="font-semibold text-foreground">{transformation.procedure}</span> • {transformation.grafts}
+              <div className="mt-6 text-center">
+                <p className="text-white/70">
+                  <span className="font-semibold text-white">{transformation.procedure}</span> • {transformation.grafts}
                 </p>
               </div>
             </div>

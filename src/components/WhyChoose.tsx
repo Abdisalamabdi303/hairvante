@@ -27,74 +27,73 @@ const WhyChoose = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-secondary/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Why Choose <span className="text-primary">HAIRVANTE</span>?
+    <section className="relative isolate overflow-hidden py-24">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#080503] via-[#050505] to-[#0c0805]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(249,216,140,0.12),transparent_55%)]" />
+
+      <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-16 px-4">
+        <div className="text-center">
+          <p className="text-xs uppercase tracking-[0.55em] text-primary/80">Hairvante Difference</p>
+          <h2 className="font-playfair text-4xl font-bold text-white md:text-5xl">
+            Why Choose <span className="text-primary">HairVante</span>?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            When it comes to your appearance and confidence, you deserve nothing but the best. 
-            Here's why thousands of satisfied patients have chosen HairVante for their transformation journey.
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-white/70">
+            When it comes to your confidence, you deserve a clinic that blends surgical excellence with concierge-level care.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
           <div className="space-y-8">
             {features.map((feature, index) => (
-              <div key={index} className="flex gap-4 group">
-                <div className="flex-shrink-0 h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <feature.icon className="h-6 w-6 text-primary" />
+              <div
+                key={index}
+                className="flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl transition hover:border-primary/40"
+              >
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
+                  <feature.icon className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">{feature.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                  <p className="mt-2 text-white/70">{feature.description}</p>
                 </div>
               </div>
             ))}
           </div>
 
           <div className="space-y-6">
-            <div className="rounded-2xl overflow-hidden shadow-[0_20px_60px_-10px_rgba(0,0,0,0.3)]">
-              <img 
-                src={clinicImage} 
-                alt="Modern HairVante clinic interior with state-of-the-art equipment" 
-                className="w-full h-auto"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-[0_20px_60px_-10px_rgba(0,0,0,0.3)]">
-              <img 
-                src={medicalTeamImage} 
-                alt="Professional HairVante medical team of hair transplant specialists" 
-                className="w-full h-auto"
-              />
-            </div>
+            {[clinicImage, medicalTeamImage].map((image, index) => (
+              <div
+                key={index}
+                className="relative overflow-hidden rounded-[32px] border border-white/10 bg-black/40 shadow-[0_35px_120px_-50px_rgba(0,0,0,1)]"
+              >
+                <img
+                  src={image}
+                  alt={index === 0 ? "Modern HairVante clinic interior" : "HairVante medical team"}
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl p-8 md:p-12 text-center">
-          <h3 className="font-playfair text-3xl md:text-4xl font-bold mb-4 text-foreground">
-            Join Thousands of Satisfied Patients
-          </h3>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
-            With over 10,000 successful procedures and a 98% patient satisfaction rate, HairVante has established itself 
-            as Turkey's most trusted name in hair restoration. Our commitment to excellence, combined with our 
-            comprehensive care approach, ensures that your journey to natural-looking, permanent results is both 
-            comfortable and successful.
+        <div className="rounded-[32px] border border-white/10 bg-gradient-to-r from-white/5 to-white/0 p-10 text-center shadow-[0_35px_120px_-60px_rgba(0,0,0,1)]">
+          <h3 className="font-playfair text-3xl text-white md:text-4xl">Join Thousands of Satisfied Patients</h3>
+          <p className="mx-auto mt-4 max-w-3xl text-lg text-white/70">
+            With more than a decade of refinement, HairVante unites medical mastery with hospitality so your entire journey
+            feels effortless.
           </p>
-          <div className="grid sm:grid-cols-3 gap-8 mt-8">
-            <div>
-              <div className="text-4xl font-bold text-primary mb-2">10,000+</div>
-              <div className="text-muted-foreground">Successful Procedures</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-primary mb-2">98%</div>
-              <div className="text-muted-foreground">Patient Satisfaction</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-primary mb-2">15+</div>
-              <div className="text-muted-foreground">Years of Excellence</div>
-            </div>
+          <div className="mt-10 grid gap-8 sm:grid-cols-3">
+            {[
+              { label: "Successful Procedures", value: "10,000+" },
+              { label: "Patient Satisfaction", value: "98%" },
+              { label: "Years of Excellence", value: "15+" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <p className="text-4xl font-bold text-primary">{stat.value}</p>
+                <p className="mt-2 text-white/70">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
