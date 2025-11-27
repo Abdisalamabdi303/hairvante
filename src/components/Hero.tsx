@@ -37,24 +37,26 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Slideshow Background */}
-      {heroSlides.map((slide, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
-          }`}
-          style={{
-            backgroundImage: `url(${slide})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center top',
-          }}
-        />
-      ))}
-      
-      {/* Overlay */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[rgba(38,38,38,0.9)] to-[rgba(38,38,38,0.6)]" />
+    <section className="relative min-h-screen flex items-center bg-[#262626] overflow-hidden">
+      {/* Right Side Slideshow */}
+      <div className="absolute right-0 top-0 bottom-0 w-full md:w-1/2 lg:w-3/5">
+        {heroSlides.map((slide, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <img
+              src={slide}
+              alt={`Hair transplant result ${index + 1}`}
+              className="w-full h-full object-contain object-center"
+            />
+          </div>
+        ))}
+        {/* Gradient overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#262626] via-[#262626]/80 to-transparent" />
+      </div>
       
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
@@ -73,7 +75,7 @@ const Hero = () => {
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl">
+        <div className="max-w-2xl">
           <div className="mb-8">
             <Logo className="h-20 md:h-28 w-auto" />
           </div>
