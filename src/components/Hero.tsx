@@ -1,23 +1,76 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
 import Logo from "@/components/Logo";
 
+import heroSlide1 from "@/assets/hero-slide-1.jpg";
+import heroSlide2 from "@/assets/hero-slide-2.jpg";
+import heroSlide3 from "@/assets/hero-slide-3.jpg";
+import heroSlide4 from "@/assets/hero-slide-4.jpg";
+import heroSlide5 from "@/assets/hero-slide-5.jpg";
+import heroSlide6 from "@/assets/hero-slide-6.jpg";
+import heroSlide7 from "@/assets/hero-slide-7.jpg";
+
+const heroSlides = [
+  heroSlide1,
+  heroSlide2,
+  heroSlide3,
+  heroSlide4,
+  heroSlide5,
+  heroSlide6,
+  heroSlide7,
+];
+
 const Hero = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/905438611089", "_blank");
   };
 
   return (
-    <section className="relative min-h-screen flex items-center">
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `linear-gradient(to right, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.6)), url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Slideshow Background */}
+      {heroSlides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out ${
+            index === currentSlide ? "opacity-100" : "opacity-0"
+          }`}
+          style={{
+            backgroundImage: `url(${slide})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center top',
+          }}
+        />
+      ))}
+      
+      {/* Overlay */}
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[rgba(38,38,38,0.9)] to-[rgba(38,38,38,0.6)]" />
+      
+      {/* Slide Indicators */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        {heroSlides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentSlide 
+                ? "bg-primary w-6" 
+                : "bg-background/50 hover:bg-background/80"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
