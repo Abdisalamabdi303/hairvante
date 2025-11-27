@@ -1,63 +1,20 @@
-import { useEffect, useState } from "react";
-import logo from "@/assets/hairvante-logo.png";
-import { removeBackground, loadImage } from "@/utils/backgroundRemoval";
+import logo from "@/assets/b19f003c-7a2f-458d-8a4c-03f9b3343c27_removalai_preview.png";
 
 interface LogoProps {
   className?: string;
   alt?: string;
 }
 
-const Logo = ({ className = "h-20 md:h-28 w-auto", alt = "HairVante - Premium Hair Transplant Turkey" }: LogoProps) => {
-  const [processedLogo, setProcessedLogo] = useState<string | null>(null);
-  const [isProcessing, setIsProcessing] = useState(true);
-
-  useEffect(() => {
-    const processLogo = async () => {
-      try {
-        // Load the original image
-        const response = await fetch(logo);
-        const blob = await response.blob();
-        const img = await loadImage(blob);
-        
-        // Remove background
-        const processedBlob = await removeBackground(img);
-        const url = URL.createObjectURL(processedBlob);
-        
-        setProcessedLogo(url);
-        setIsProcessing(false);
-      } catch (error) {
-        console.error('Failed to process logo:', error);
-        // Fallback to original logo if processing fails
-        setProcessedLogo(logo);
-        setIsProcessing(false);
-      }
-    };
-
-    processLogo();
-
-    return () => {
-      if (processedLogo && processedLogo !== logo) {
-        URL.revokeObjectURL(processedLogo);
-      }
-    };
-  }, []);
-
-  if (isProcessing) {
-    return (
-      <div className={className}>
-        <div className="animate-pulse bg-primary/20 rounded-lg h-full w-48" />
-      </div>
-    );
-  }
-
-  return (
-    <img 
-      src={processedLogo || logo} 
-      alt={alt}
-      className={`${className} drop-shadow-2xl`}
-      style={{ filter: 'drop-shadow(0 4px 20px rgba(212, 175, 55, 0.3))' }}
-    />
-  );
-};
+const Logo = ({
+  className = "w-full max-w-[230px]",
+  alt = "HairVante - Premium Hair Transplant Turkey",
+}: LogoProps) => (
+  <img
+    src={logo}
+    alt={alt}
+    className={`h-auto select-none object-contain ${className}`}
+    loading="eager"
+  />
+);
 
 export default Logo;

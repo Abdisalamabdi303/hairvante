@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import Logo from "@/components/Logo";
@@ -37,73 +37,116 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center bg-[#262626] overflow-hidden">
-      {/* Right Side Slideshow */}
-      <div className="absolute right-0 top-0 bottom-0 w-full md:w-1/2 lg:w-3/5">
-        {heroSlides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              index === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <img
-              src={slide}
-              alt={`Hair transplant result ${index + 1}`}
-              className="w-full h-full object-contain object-center"
-            />
-          </div>
-        ))}
-        {/* Gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#262626] via-[#262626]/80 to-transparent" />
+    <section className="relative overflow-hidden bg-[#050505] text-background">
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#050505] via-[#120c05] to-[#1a1309]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(250,224,170,0.25),transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(0,0,0,0.7),transparent_65%)]" />
       </div>
-      
-      {/* Slide Indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-        {heroSlides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentSlide 
-                ? "bg-primary w-6" 
-                : "bg-background/50 hover:bg-background/80"
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-2xl">
-          <div className="mb-8">
-            <Logo className="h-20 md:h-28 w-auto" />
+
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 pb-20 pt-24 lg:flex-row lg:items-center lg:gap-16">
+        <div className="flex-1 space-y-8">
+          <div className="space-y-4">
+            <div className="inline-flex items-center gap-4 rounded-[32px] border border-white/10 bg-white/5 px-6 py-4 shadow-[0_40px_120px_-60px_rgba(0,0,0,1)] backdrop-blur-xl">
+              <div className="relative">
+                <div className="absolute inset-0 -z-10 translate-y-1 rounded-full bg-gradient-to-r from-[#f8d88d]/60 to-transparent blur-2xl" />
+                <Logo className="w-[230px]" />
+              </div>
+              <div className="hidden text-left text-xs uppercase tracking-[0.45em] text-white/70 lg:block">
+                <p>Precision Craft</p>
+                <p className="text-primary/80">Luxury Care</p>
+              </div>
+            </div>
+            <p className="text-xs uppercase tracking-[0.55em] text-primary/80">
+              Bespoke Hair Restoration • Istanbul
+            </p>
           </div>
-          <h2 className="font-playfair text-3xl md:text-5xl font-semibold mb-6 text-background">
-            Restore Your Confidence with World-Class Hair Restoration
-          </h2>
-          <p className="text-xl md:text-2xl mb-8 text-background/90 leading-relaxed">
-            Experience the transformation you deserve with Turkey's premier hair transplant specialists. 
-            Our all-inclusive packages combine cutting-edge FUE and DHI techniques with luxury accommodation, 
-            ensuring your journey to natural-looking, permanent results is seamless and comfortable.
+
+          <h1 className="font-playfair text-4xl font-semibold text-white md:text-5xl">
+            Natural-looking hair restoration paired with five-star care.
+          </h1>
+
+          <p className="text-lg text-white/80 md:text-xl">
+            From personalized graft planning to luxury recovery suites, every detail of the HairVante
+            journey is designed to restore confidence with elegance and comfort.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8 py-6 shadow-[0_10px_40px_-10px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_20px_50px_-10px_hsl(var(--primary)/0.6)] hover:scale-105"
+
+          <div className="flex flex-col gap-4 sm:flex-row">
+            <Button
+              size="lg"
+              className="group w-full bg-gradient-to-r from-[#f8d88d] via-[#e0b257] to-[#bf8a2b] text-black shadow-[0_20px_60px_-30px_rgba(248,216,141,0.9)] transition-all hover:scale-[1.02] sm:w-auto"
               onClick={handleWhatsAppClick}
             >
-              <Phone className="mr-2 h-5 w-5" />
-              Get Free Consultation
+              <Phone className="mr-2 h-5 w-5 transition-transform duration-300 group-hover:-translate-y-0.5" />
+              WhatsApp Consultation
             </Button>
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               variant="outline"
-              className="border-2 border-background text-background hover:bg-background hover:text-foreground font-semibold text-lg px-8 py-6 transition-all"
-              onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })}
+              className="w-full border-white/30 bg-transparent text-white hover:bg-white/10 sm:w-auto"
+              onClick={() =>
+                document.getElementById("packages")?.scrollIntoView({ behavior: "smooth" })
+              }
             >
-              View Packages
+              Explore Packages
             </Button>
+          </div>
+
+          <div className="flex flex-wrap gap-3 text-sm text-white/70">
+            {[
+              "Chauffeured airport transfers",
+              "Boutique accommodation partners",
+              "Dedicated post-op specialists",
+              "Lifetime graft guarantee",
+            ].map((item) => (
+              <span
+                key={item}
+                className="rounded-full border border-white/15 px-4 py-2 backdrop-blur-sm"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="relative flex-1">
+          <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-black/30 shadow-[0_45px_120px_-50px_rgba(0,0,0,1)]">
+            <div className="relative aspect-[4/5] w-full min-h-[420px]">
+              {heroSlides.map((slide, index) => (
+                <div
+                  key={index}
+                  className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                    index === currentSlide ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  <img
+                    src={slide}
+                    alt={`Hair transplant result ${index + 1}`}
+                    className="h-full w-full object-cover object-center"
+                  />
+                </div>
+              ))}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
+            </div>
+
+            <div className="flex items-center justify-between px-6 py-4 text-xs uppercase tracking-[0.4em] text-white/60">
+              <span>Before • After</span>
+              <div className="flex gap-2">
+                {heroSlides.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`h-1 rounded-full transition-all ${
+                      index === currentSlide
+                        ? "w-8 bg-gradient-to-r from-[#f8d88d] to-[#bf8a2b]"
+                        : "w-3 bg-white/20"
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
