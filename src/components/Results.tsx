@@ -48,6 +48,25 @@ const Results = () => {
           </p>
         </div>
 
+        {/* Featured Video */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-auto object-cover"
+            >
+              <source src="/videos/treatment-video.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
+          </div>
+          <p className="text-center text-muted-foreground mt-4 text-sm">
+            Watch our treatment process in action
+          </p>
+        </div>
+
         <div className="space-y-16">
           {transformations.map((transformation, index) => (
             <div key={index} className="max-w-6xl mx-auto">
