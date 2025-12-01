@@ -1,7 +1,10 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 import Logo from "@/components/Logo";
+import { useTranslation } from "@/contexts/TranslationContext";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="relative overflow-hidden bg-gradient-to-b from-[#070606] via-[#050505] to-[#0b0b0b] py-16 text-background">
       <div className="pointer-events-none absolute inset-0 opacity-40">
@@ -15,20 +18,19 @@ const Footer = () => {
               alt="HairVante Logo"
             />
             <p className="text-background/75">
-              HairVante blends artistry and surgical precision for natural-looking
-              transplant results, paired with five-star hospitality in the heart of Istanbul.
+              {t.footer.description}
             </p>
           </div>
 
           <div>
-            <h4 className="mb-4 font-semibold text-lg text-primary">Quick Links</h4>
+            <h4 className="mb-4 font-semibold text-lg text-primary">{t.footer.quickLinks.title}</h4>
             <ul className="space-y-3 text-background/80">
               <li>
                 <a
                   href="#packages"
                   className="transition-colors hover:text-primary"
                 >
-                  Packages & Pricing
+                  {t.footer.quickLinks.packages}
                 </a>
               </li>
               <li>
@@ -36,7 +38,7 @@ const Footer = () => {
                   href="#consultation"
                   className="transition-colors hover:text-primary"
                 >
-                  Free Consultation
+                  {t.footer.quickLinks.contact}
                 </a>
               </li>
               <li>
@@ -44,14 +46,14 @@ const Footer = () => {
                   onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                   className="transition-colors hover:text-primary"
                 >
-                  About Us
+                  {t.footer.quickLinks.about}
                 </button>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="mb-4 font-semibold text-lg text-primary">Contact Information</h4>
+            <h4 className="mb-4 font-semibold text-lg text-primary">{t.footer.contact.title}</h4>
             <div className="space-y-3 text-background/80">
               <a
                 href="https://wa.me/905438611089"
@@ -60,18 +62,18 @@ const Footer = () => {
                 className="flex items-center gap-2 transition-colors hover:text-primary"
               >
                 <Phone className="h-4 w-4" />
-                +90 543 861 10 89
+                {t.footer.contact.phone}
               </a>
               <a
                 href="mailto:info@hairvante.com"
                 className="flex items-center gap-2 transition-colors hover:text-primary"
               >
                 <Mail className="h-4 w-4" />
-                info@hairvante.com
+                {t.footer.contact.email}
               </a>
               <div className="flex items-start gap-2">
                 <MapPin className="mt-1 h-4 w-4 flex-shrink-0" />
-                <span>Istanbul, Turkey — Premier medical tourism hub</span>
+                <span>{t.footer.contact.address}</span>
               </div>
             </div>
           </div>
@@ -79,10 +81,7 @@ const Footer = () => {
 
         <div className="border-t border-white/10 pt-8 text-center text-sm text-background/60">
           <p>
-            © {new Date().getFullYear()} HairVante. All rights reserved. | Expert Hair Restoration in Turkey
-          </p>
-          <p className="mt-2">
-            Licensed medical professionals • ISO-certified surgical suites • Dedicated aftercare
+            {t.footer.copyright}
           </p>
         </div>
       </div>
