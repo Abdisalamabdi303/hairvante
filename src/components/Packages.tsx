@@ -8,7 +8,8 @@ const Packages = () => {
   const { t } = useTranslation();
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/905438611089", "_blank");
+    const message = encodeURIComponent(t.common.whatsappMessage);
+    window.open(`https://wa.me/905431293599?text=${message}`, "_blank");
   };
 
   const features = [

@@ -329,7 +329,7 @@ export const tr: TranslationKeys = {
         contact: {
             title: "Bize Ulaşın",
             address: "İstanbul, Türkiye",
-            phone: "+90 543 861 1089",
+            phone: "+90 543 129 35 99",
             email: "info@hairvante.com",
         },
         social: {
@@ -354,5 +354,6 @@ export const tr: TranslationKeys = {
         close: "Kapat",
         loading: "Yükleniyor...",
         whatsapp: "WhatsApp",
+        whatsappMessage: "Merhaba! HairVante'nin saç restorasyon hizmetleri hakkında daha fazla bilgi almak istiyorum. Bana daha fazla bilgi verebilir misiniz?",
     },
 };

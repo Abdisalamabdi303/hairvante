@@ -37,7 +37,8 @@ const Hero = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/252619612580", "_blank");
+    const message = encodeURIComponent(t.common.whatsappMessage);
+    window.open(`https://wa.me/905431293599?text=${message}`, "_blank");
   };
 
   return (
@@ -185,8 +186,8 @@ const Hero = () => {
                     key={index}
                     onClick={() => setCurrentSlide(index)}
                     className={`h-1 rounded-full transition-all ${index === currentSlide
-                        ? "w-8 bg-gradient-to-r from-[#f8d88d] to-[#bf8a2b]"
-                        : "w-3 bg-white/20"
+                      ? "w-8 bg-gradient-to-r from-[#f8d88d] to-[#bf8a2b]"
+                      : "w-3 bg-white/20"
                       }`}
                     aria-label={`Go to slide ${index + 1}`}
                   />

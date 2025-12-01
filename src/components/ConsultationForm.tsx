@@ -31,7 +31,7 @@ const ConsultationForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const template = t.consultation.whatsappTemplate;
     const fmt = (value: string, fallback = template.notProvided) => value || fallback;
     const whatsappMessage =
@@ -49,14 +49,14 @@ const ConsultationForm = () => {
       `${template.previousProcedures}: ${fmt(formData.previousProcedures, template.none)}%0A` +
       `${template.smoking}: ${fmt(formData.smokingStatus)}%0A` +
       `${template.alcohol}: ${fmt(formData.alcoholUse)}`;
-    
-    window.open(`https://wa.me/905438611089?text=${whatsappMessage}`, "_blank");
-    
+
+    window.open(`https://wa.me/905431293599?text=${whatsappMessage}`, "_blank");
+
     toast({
       title: t.consultation.success,
       description: t.consultation.successNote,
     });
-    
+
     setFormData(initialFormState);
   };
 
@@ -75,12 +75,12 @@ const ConsultationForm = () => {
       content: (
         <>
           <a
-            href="https://wa.me/905438611089"
+            href={`https://wa.me/905431293599?text=${encodeURIComponent(t.common.whatsappMessage)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-lg font-semibold text-primary hover:underline"
           >
-            +90 543 861 10 89
+            +90 543 129 35 99
           </a>
           <p className="mt-2 text-sm text-white/70">{t.consultation.cards.whatsapp.note}</p>
         </>

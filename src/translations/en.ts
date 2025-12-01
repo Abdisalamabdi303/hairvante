@@ -327,7 +327,7 @@ export const en = {
         contact: {
             title: "Contact Us",
             address: "Istanbul, Turkey",
-            phone: "+90 543 861 1089",
+            phone: "+90 543 129 35 99",
             email: "info@hairvante.com",
         },
         social: {
@@ -352,6 +352,7 @@ export const en = {
         close: "Close",
         loading: "Loading...",
         whatsapp: "WhatsApp",
+        whatsappMessage: "Hello! I'm interested in learning more about HairVante's hair restoration services. Could you please provide me with more information?",
     },
 };
 
