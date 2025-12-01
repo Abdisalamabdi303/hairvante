@@ -1,6 +1,6 @@
 import { Award, Users, Sparkles, HeadphonesIcon } from "lucide-react";
 import clinicImage from "@/assets/clinic-interior.jpg";
-import medicalTeamImage from "@/assets/medical-team.jpg";
+import medicalTeamImage from "@/assets/doctors.jpeg";
 import { motion } from "framer-motion";
 import { useTranslation } from "@/contexts/TranslationContext";
 
@@ -84,7 +84,7 @@ const WhyChoose = () => {
             {[clinicImage, medicalTeamImage].map((image, index) => (
               <motion.div
                 key={index}
-                className="relative overflow-hidden rounded-[32px] border border-white/10 bg-black/40 shadow-[0_35px_120px_-50px_rgba(0,0,0,1)]"
+                className="relative h-64 overflow-hidden rounded-[32px] border border-white/10 bg-black/40 shadow-[0_35px_120px_-50px_rgba(0,0,0,1)]"
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -94,7 +94,7 @@ const WhyChoose = () => {
                 <img
                   src={image}
                   alt={index === 0 ? "Modern HairVante clinic interior" : "HairVante medical team"}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               </motion.div>
