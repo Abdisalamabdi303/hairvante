@@ -36,10 +36,7 @@ const WhyChoose = () => {
   ];
 
   return (
-    <section className="relative isolate overflow-hidden py-24">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#080503] via-[#050505] to-[#0c0805]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(249,216,140,0.12),transparent_55%)]" />
-
+    <section className="relative isolate overflow-hidden py-24 bg-background">
       <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-16 px-4">
         <motion.div
           className="text-center"
@@ -48,33 +45,33 @@ const WhyChoose = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-xs uppercase tracking-[0.55em] text-primary/80">{t.whyChoose.subtitle}</p>
-          <h2 className="font-playfair text-4xl font-bold text-white md:text-5xl">
+          <p className="text-xs uppercase tracking-[0.55em] text-primary">{t.whyChoose.subtitle}</p>
+          <h2 className="font-playfair text-4xl font-bold text-foreground md:text-5xl">
             {t.whyChoose.title}
           </h2>
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-white/70">
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
             {t.whyChoose.description}
           </p>
         </motion.div>
 
         <div className="grid items-center gap-12 lg:grid-cols-2">
-          <div className="space-y-8">
+          <div className="space-y-6">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                className="flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl transition hover:border-primary/40"
+                className="flex gap-4 rounded-xl border border-border bg-card p-5 shadow-sm transition hover:border-primary/40 hover:shadow-md"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <feature.icon className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-                  <p className="mt-2 text-white/70">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-foreground">{feature.title}</h3>
+                  <p className="mt-2 text-muted-foreground">{feature.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -84,7 +81,7 @@ const WhyChoose = () => {
             {[clinicImage, medicalTeamImage].map((image, index) => (
               <motion.div
                 key={index}
-                className="relative h-64 overflow-hidden rounded-[32px] border border-white/10 bg-black/40 shadow-[0_35px_120px_-50px_rgba(0,0,0,1)]"
+                className="relative h-64 overflow-hidden rounded-2xl border border-border bg-card shadow-lg"
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -96,21 +93,20 @@ const WhyChoose = () => {
                   alt={index === 0 ? "Modern HairVante clinic interior" : "HairVante medical team"}
                   className="h-full w-full object-cover object-center"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               </motion.div>
             ))}
           </div>
         </div>
 
         <motion.div
-          className="rounded-[32px] border border-white/10 bg-gradient-to-r from-white/5 to-white/0 p-10 text-center shadow-[0_35px_120px_-60px_rgba(0,0,0,1)]"
+          className="rounded-2xl border border-border bg-secondary p-10 text-center shadow-lg"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="font-playfair text-3xl text-white md:text-4xl">{t.whyChoose.statsBlock.title}</h3>
-          <p className="mx-auto mt-4 max-w-3xl text-lg text-white/70">
+          <h3 className="font-playfair text-3xl text-foreground md:text-4xl">{t.whyChoose.statsBlock.title}</h3>
+          <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">
             {t.whyChoose.statsBlock.description}
           </p>
           <div className="mt-10 grid gap-8 sm:grid-cols-3">
@@ -123,7 +119,7 @@ const WhyChoose = () => {
                 transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
               >
                 <p className="text-4xl font-bold text-primary">{stat.value}</p>
-                <p className="mt-2 text-white/70">{stat.label}</p>
+                <p className="mt-2 text-muted-foreground">{stat.label}</p>
               </motion.div>
             ))}
           </div>

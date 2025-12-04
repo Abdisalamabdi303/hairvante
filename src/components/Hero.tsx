@@ -42,13 +42,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#050505] text-background">
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#050505] via-[#120c05] to-[#1a1309]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(250,224,170,0.25),transparent_55%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(0,0,0,0.7),transparent_65%)]" />
-      </div>
-
+    <section className="relative overflow-hidden bg-secondary">
       {/* Language Toggle - Top Right */}
       <div className="absolute right-4 top-4 z-20 md:right-8 md:top-8">
         <LanguageToggle />
@@ -67,23 +61,22 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="inline-flex items-center gap-4 rounded-[32px] border border-white/10 bg-white/5 px-6 py-4 shadow-[0_40px_120px_-60px_rgba(0,0,0,1)] backdrop-blur-xl">
+            <div className="inline-flex items-center gap-4 rounded-2xl border border-border bg-card px-6 py-4 shadow-lg">
               <div className="relative">
-                <div className="absolute inset-0 -z-10 translate-y-1 rounded-full bg-gradient-to-r from-[#f8d88d]/60 to-transparent blur-2xl" />
                 <Logo className="w-[230px]" />
               </div>
-              <div className="hidden text-left text-xs uppercase tracking-[0.45em] text-white/70 lg:block">
+              <div className="hidden text-left text-xs uppercase tracking-[0.45em] text-muted-foreground lg:block">
                 <p>{t.hero.precisionCraft}</p>
-                <p className="text-primary/80">{t.hero.luxuryCare}</p>
+                <p className="text-primary">{t.hero.luxuryCare}</p>
               </div>
             </div>
-            <p className="text-xs uppercase tracking-[0.55em] text-primary/80">
+            <p className="text-xs uppercase tracking-[0.55em] text-primary">
               {t.hero.tagline}
             </p>
           </motion.div>
 
           <motion.h1
-            className="font-playfair text-4xl font-semibold text-white md:text-5xl"
+            className="font-playfair text-4xl font-semibold text-foreground md:text-5xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -92,7 +85,7 @@ const Hero = () => {
           </motion.h1>
 
           <motion.p
-            className="text-lg text-white/80 md:text-xl"
+            className="text-lg text-muted-foreground md:text-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -108,7 +101,7 @@ const Hero = () => {
           >
             <Button
               size="lg"
-              className="group w-full bg-gradient-to-r from-[#f8d88d] via-[#e0b257] to-[#bf8a2b] text-black shadow-[0_20px_60px_-30px_rgba(248,216,141,0.9)] transition-all hover:scale-[1.02] sm:w-auto"
+              className="group w-full bg-primary text-primary-foreground shadow-lg transition-all hover:scale-[1.02] sm:w-auto"
               onClick={handleWhatsAppClick}
             >
               <Phone className="mr-2 h-5 w-5 transition-transform duration-300 group-hover:-translate-y-0.5" />
@@ -117,7 +110,7 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="w-full border-white/30 bg-transparent text-white hover:bg-white/10 sm:w-auto"
+              className="w-full border-border bg-card text-foreground hover:bg-muted sm:w-auto"
               onClick={() =>
                 document.getElementById("packages")?.scrollIntoView({ behavior: "smooth" })
               }
@@ -127,7 +120,7 @@ const Hero = () => {
           </motion.div>
 
           <motion.div
-            className="flex flex-wrap gap-3 text-sm text-white/70"
+            className="flex flex-wrap gap-3 text-sm text-muted-foreground"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -140,7 +133,7 @@ const Hero = () => {
             ].map((item, index) => (
               <motion.span
                 key={item}
-                className="rounded-full border border-white/15 px-4 py-2 backdrop-blur-sm"
+                className="rounded-full border border-border bg-card px-4 py-2 shadow-sm"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
@@ -157,7 +150,7 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-black/30 shadow-[0_45px_120px_-50px_rgba(0,0,0,1)]">
+          <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-xl">
             <div className="relative aspect-[4/5] w-full min-h-[420px]">
               {heroSlides.map((slide, index) => (
                 <motion.div
@@ -174,11 +167,9 @@ const Hero = () => {
                   />
                 </motion.div>
               ))}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
             </div>
 
-            <div className="flex items-center justify-between px-6 py-4 text-xs uppercase tracking-[0.4em] text-white/60">
+            <div className="flex items-center justify-between bg-card px-6 py-4 text-xs uppercase tracking-[0.4em] text-muted-foreground">
               <span>{t.hero.beforeAfter}</span>
               <div className="flex gap-2">
                 {heroSlides.map((_, index) => (
@@ -186,8 +177,8 @@ const Hero = () => {
                     key={index}
                     onClick={() => setCurrentSlide(index)}
                     className={`h-1 rounded-full transition-all ${index === currentSlide
-                      ? "w-8 bg-gradient-to-r from-[#f8d88d] to-[#bf8a2b]"
-                      : "w-3 bg-white/20"
+                      ? "w-8 bg-primary"
+                      : "w-3 bg-border"
                       }`}
                     aria-label={`Go to slide ${index + 1}`}
                   />

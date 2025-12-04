@@ -29,10 +29,7 @@ const Packages = () => {
   ];
 
   return (
-    <section id="packages" className="relative isolate overflow-hidden py-24">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#070504] via-[#050505] to-[#090806]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(249,216,140,0.08),transparent_65%)]" />
-
+    <section id="packages" className="relative isolate overflow-hidden py-24 bg-background">
       <div className="relative z-10 mx-auto max-w-5xl px-4">
         <motion.div
           className="text-center"
@@ -41,11 +38,11 @@ const Packages = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-xs uppercase tracking-[0.5em] text-primary/80">{t.packages.subtitle}</p>
-          <h2 className="font-playfair text-4xl text-white md:text-5xl">
+          <p className="text-xs uppercase tracking-[0.5em] text-primary">{t.packages.subtitle}</p>
+          <h2 className="font-playfair text-4xl text-foreground md:text-5xl">
             {t.packages.title} <span className="text-primary">{t.packages.titleHighlight}</span> {t.packages.titleEnd}
           </h2>
-          <p className="mx-auto mt-4 max-w-3xl text-lg text-white/70">
+          <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">
             {t.packages.description}
           </p>
         </motion.div>
@@ -57,27 +54,27 @@ const Packages = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <Card className="overflow-hidden rounded-[32px] border border-white/15 bg-white/5 text-white shadow-[0_45px_120px_-60px_rgba(0,0,0,1)]">
-            <div className="bg-gradient-to-r from-[#f8d88d] via-[#dfb25a] to-[#b8802a] p-8 text-center text-black">
+          <Card className="overflow-hidden rounded-2xl border border-border bg-card shadow-lg">
+            <div className="bg-primary p-8 text-center text-primary-foreground">
               <CardTitle className="font-playfair text-4xl font-bold md:text-5xl">{t.packages.price}</CardTitle>
-              <CardDescription className="text-base text-black/80">
+              <CardDescription className="text-base text-primary-foreground/80">
                 {t.packages.priceDescription}
               </CardDescription>
             </div>
 
             <CardHeader className="text-center pb-4">
-              <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-primary/60 bg-primary/10 px-4 py-2 text-primary">
+              <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-primary">
                 <Sparkles className="h-5 w-5" />
                 <span className="font-semibold">{t.packages.limitedOffer}</span>
               </div>
             </CardHeader>
 
             <CardContent className="space-y-10 pb-10">
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-4 md:grid-cols-2">
                 {features.map((item, idx) => (
                   <motion.div
                     key={item.title}
-                    className="flex items-start gap-3 rounded-2xl border border-white/5 bg-white/5 px-4 py-3"
+                    className="flex items-start gap-3 rounded-xl border border-border bg-secondary px-4 py-3"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -88,28 +85,28 @@ const Packages = () => {
                       <Check className="h-4 w-4" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-white">{item.title}</h4>
-                      <p className="text-sm text-white/70">{item.description}</p>
+                      <h4 className="font-semibold text-foreground">{item.title}</h4>
+                      <p className="text-sm text-muted-foreground">{item.description}</p>
                     </div>
                   </motion.div>
                 ))}
               </div>
 
-              <div className="space-y-6 rounded-[24px] border border-white/10 bg-white/5 p-6">
+              <div className="space-y-6 rounded-xl border border-border bg-secondary p-6">
                 <div className="flex items-start gap-3">
                   <Gift className="mt-1 h-6 w-6 text-primary" />
                   <div>
-                    <h4 className="font-playfair text-2xl text-white">{t.packages.bonuses.title}</h4>
-                    <p className="text-white/70">
+                    <h4 className="font-playfair text-2xl text-foreground">{t.packages.bonuses.title}</h4>
+                    <p className="text-muted-foreground">
                       {t.packages.bonuses.description}
                     </p>
                   </div>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2">
                   {bonuses.map((bonus) => (
-                    <div key={bonus.title} className="rounded-2xl border border-white/10 bg-black/30 p-4">
-                      <h5 className="font-semibold text-white">{bonus.title}</h5>
-                      <p className="text-sm text-white/70">{bonus.copy}</p>
+                    <div key={bonus.title} className="rounded-xl border border-border bg-card p-4">
+                      <h5 className="font-semibold text-foreground">{bonus.title}</h5>
+                      <p className="text-sm text-muted-foreground">{bonus.copy}</p>
                     </div>
                   ))}
                 </div>
@@ -118,12 +115,12 @@ const Packages = () => {
               <div className="text-center">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-[#f8d88d] via-[#dfb25a] to-[#b8802a] px-12 py-6 text-black shadow-[0_25px_80px_-40px_rgba(248,216,141,1)] transition hover:scale-105"
+                  className="bg-primary px-12 py-6 text-primary-foreground shadow-lg transition hover:scale-105"
                   onClick={handleWhatsAppClick}
                 >
                   {t.packages.ctaButton}
                 </Button>
-                <p className="mt-4 text-sm text-white/70">
+                <p className="mt-4 text-sm text-muted-foreground">
                   {t.packages.ctaDescription}
                 </p>
               </div>

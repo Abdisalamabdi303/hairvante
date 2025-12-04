@@ -6,18 +6,15 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-b from-[#070606] via-[#050505] to-[#0b0b0b] py-16 text-background">
-      <div className="pointer-events-none absolute inset-0 opacity-40">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(249,217,144,0.12),transparent_55%)]" />
-      </div>
+    <footer className="relative overflow-hidden bg-foreground py-16 text-background">
       <div className="container relative mx-auto px-4">
-        <div className="mb-10 grid gap-10 md:grid-cols-3">
+        <div className="mb-10 grid gap-10 md:grid-cols-4">
           <div>
             <Logo
               className="h-10 w-auto"
               alt="HairVante Logo"
             />
-            <p className="text-background/75">
+            <p className="mt-4 text-background/75">
               {t.footer.description}
             </p>
           </div>
@@ -53,6 +50,17 @@ const Footer = () => {
           </div>
 
           <div>
+            <h4 className="mb-4 font-semibold text-lg text-primary">{t.footer.services.title}</h4>
+            <ul className="space-y-3 text-background/80">
+              <li>{t.footer.services.fue}</li>
+              <li>{t.footer.services.dhi}</li>
+              <li>{t.footer.services.beard}</li>
+              <li>{t.footer.services.eyebrow}</li>
+              <li>{t.footer.services.prp}</li>
+            </ul>
+          </div>
+
+          <div>
             <h4 className="mb-4 font-semibold text-lg text-primary">{t.footer.contact.title}</h4>
             <div className="space-y-3 text-background/80">
               <a
@@ -79,7 +87,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 text-center text-sm text-background/60">
+        <div className="border-t border-background/20 pt-8 text-center text-sm text-background/60">
           <p>
             {t.footer.copyright}
           </p>

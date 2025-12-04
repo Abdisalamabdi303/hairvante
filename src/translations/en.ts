@@ -4,8 +4,8 @@ export const en = {
         tagline: "Bespoke Hair Restoration • Istanbul",
         precisionCraft: "Precision Craft",
         luxuryCare: "Luxury Care",
-        title: "Natural-looking hair restoration paired with five-star care.",
-        description: "From personalized graft planning to luxury recovery suites, every detail of the HairVante journey is designed to restore confidence with elegance and comfort.",
+        title: "Natural-looking hair & beard restoration paired with five-star care.",
+        description: "From personalized graft planning to luxury recovery suites, every detail of the HairVante journey is designed to restore confidence with elegance and comfort. We specialize in FUE hair transplants and beard transplants.",
         whatsappButton: "WhatsApp Consultation",
         packagesButton: "Explore Packages",
         features: {
