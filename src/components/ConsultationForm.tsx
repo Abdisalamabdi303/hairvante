@@ -82,7 +82,7 @@ const ConsultationForm = () => {
           >
             +90 543 129 35 99
           </a>
-          <p className="mt-2 text-sm text-white/70">{t.consultation.cards.whatsapp.note}</p>
+          <p className="mt-2 text-sm text-muted-foreground">{t.consultation.cards.whatsapp.note}</p>
         </>
       ),
     },
@@ -95,7 +95,7 @@ const ConsultationForm = () => {
           <a href="mailto:info@hairvante.com" className="text-lg font-semibold text-primary hover:underline">
             info@hairvante.com
           </a>
-          <p className="mt-2 text-sm text-white/70">{t.consultation.cards.email.note}</p>
+          <p className="mt-2 text-sm text-muted-foreground">{t.consultation.cards.email.note}</p>
         </>
       ),
     },
@@ -104,7 +104,7 @@ const ConsultationForm = () => {
       title: t.consultation.cards.expect.title,
       description: t.consultation.cards.expect.description,
       content: (
-        <div className="space-y-2 text-white/70">
+        <div className="space-y-2 text-muted-foreground">
           {t.consultation.cards.expect.steps.map((step, idx) => (
             <div key={step} className="flex items-start gap-2">
               <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary/20 text-xs font-bold text-primary">
@@ -122,17 +122,14 @@ const ConsultationForm = () => {
   const medical = t.consultation.sections.medical;
 
   return (
-    <section id="consultation" className="relative isolate overflow-hidden py-24">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#080604] via-[#050505] to-[#080604]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(249,216,140,0.08),transparent_60%)]" />
-
+    <section id="consultation" className="relative isolate overflow-hidden py-24 bg-background">
       <div className="relative z-10 mx-auto max-w-6xl px-4">
         <div className="text-center">
-          <p className="text-xs uppercase tracking-[0.5em] text-primary/80">{t.consultation.subtitle}</p>
-          <h2 className="font-playfair text-4xl text-white md:text-5xl">
+          <p className="text-xs uppercase tracking-[0.5em] text-primary">{t.consultation.subtitle}</p>
+          <h2 className="font-playfair text-4xl text-foreground md:text-5xl">
             {t.consultation.title}
           </h2>
-          <p className="mx-auto mt-4 max-w-3xl text-lg text-white/70">
+          <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">
             {t.consultation.description}
           </p>
         </div>
@@ -154,15 +151,15 @@ const ConsultationForm = () => {
                 transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                 whileHover={{ scale: 1.02 }}
               >
-                <Card className="rounded-[24px] border border-white/10 bg-white/5 text-white shadow-[0_25px_80px_-60px_rgba(0,0,0,1)]">
+                <Card className="rounded-xl border border-border bg-card shadow-md">
                   <CardHeader>
                     <div className="flex items-center gap-3">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/15 text-primary">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
                         <card.icon className="h-6 w-6" />
                       </div>
                       <div>
-                        <CardTitle className="text-lg text-white">{card.title}</CardTitle>
-                        <CardDescription className="text-xs text-white/70">{card.description}</CardDescription>
+                        <CardTitle className="text-lg text-foreground">{card.title}</CardTitle>
+                        <CardDescription className="text-xs text-muted-foreground">{card.description}</CardDescription>
                       </div>
                     </div>
                   </CardHeader>
@@ -178,10 +175,10 @@ const ConsultationForm = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Card className="rounded-[28px] border border-white/10 bg-white/5 text-white shadow-[0_35px_120px_-60px_rgba(0,0,0,1)]">
+            <Card className="rounded-xl border border-border bg-card shadow-lg">
               <CardHeader>
-                <CardTitle className="font-playfair text-3xl text-white">{t.consultation.title}</CardTitle>
-                <CardDescription className="text-white/70">
+                <CardTitle className="font-playfair text-3xl text-foreground">{t.consultation.title}</CardTitle>
+                <CardDescription className="text-muted-foreground">
                   {t.consultation.description}
                 </CardDescription>
               </CardHeader>
@@ -196,7 +193,7 @@ const ConsultationForm = () => {
                       onChange={handleChange}
                       placeholder={t.consultation.form.name.placeholder}
                       required
-                      className="border-white/20 bg-black/40 text-white placeholder:text-white/40"
+                      className="border-border bg-background text-foreground"
                     />
                   </div>
 
@@ -210,7 +207,7 @@ const ConsultationForm = () => {
                       onChange={handleChange}
                       placeholder={t.consultation.form.email.placeholder}
                       required
-                      className="border-white/20 bg-black/40 text-white placeholder:text-white/40"
+                      className="border-border bg-background text-foreground"
                     />
                   </div>
 
@@ -225,7 +222,7 @@ const ConsultationForm = () => {
                         onChange={handleChange}
                         placeholder={t.consultation.form.phone.placeholder}
                         required
-                        className="border-white/20 bg-black/40 text-white placeholder:text-white/40"
+                        className="border-border bg-background text-foreground"
                       />
                     </div>
 
@@ -238,13 +235,13 @@ const ConsultationForm = () => {
                         value={formData.age}
                         onChange={handleChange}
                         placeholder={t.consultation.form.age.placeholder}
-                        className="border-white/20 bg-black/40 text-white placeholder:text-white/40"
+                        className="border-border bg-background text-foreground"
                       />
                     </div>
                   </div>
 
-                  <div className="space-y-6 rounded-[20px] border border-white/15 bg-black/30 p-4">
-                    <p className="text-sm uppercase tracking-[0.4em] text-white/60">{goals.title}</p>
+                  <div className="space-y-6 rounded-xl border border-border bg-secondary p-4">
+                    <p className="text-sm uppercase tracking-[0.4em] text-muted-foreground">{goals.title}</p>
                     <div className="space-y-2">
                       <Label htmlFor="message">{goals.questionLabel}</Label>
                       <Textarea
@@ -254,7 +251,7 @@ const ConsultationForm = () => {
                         onChange={handleChange}
                         placeholder={goals.questionPlaceholder}
                         rows={4}
-                        className="border-white/20 bg-black/40 text-white placeholder:text-white/40"
+                        className="border-border bg-background text-foreground"
                       />
                     </div>
                     <div className="space-y-2">
@@ -265,15 +262,15 @@ const ConsultationForm = () => {
                         value={formData.preferredTravelWindow}
                         onChange={handleChange}
                         placeholder={goals.travelPlaceholder}
-                        className="border-white/20 bg-black/40 text-white placeholder:text-white/40"
+                        className="border-border bg-background text-foreground"
                       />
                     </div>
                   </div>
 
-                  <div className="space-y-4 rounded-[20px] border border-white/15 bg-black/30 p-4">
+                  <div className="space-y-4 rounded-xl border border-border bg-secondary p-4">
                     <div>
-                      <p className="text-sm uppercase tracking-[0.4em] text-white/60">{medical.title}</p>
-                      <p className="text-xs text-white/50">{medical.description}</p>
+                      <p className="text-sm uppercase tracking-[0.4em] text-muted-foreground">{medical.title}</p>
+                      <p className="text-xs text-muted-foreground">{medical.description}</p>
                     </div>
 
                     <div className="space-y-2">
@@ -286,7 +283,7 @@ const ConsultationForm = () => {
                         placeholder={medical.conditionsPlaceholder}
                         rows={3}
                         required
-                        className="border-white/20 bg-black/40 text-white placeholder:text-white/40"
+                        className="border-border bg-background text-foreground"
                       />
                     </div>
 
@@ -300,7 +297,7 @@ const ConsultationForm = () => {
                         placeholder={medical.medicationsPlaceholder}
                         rows={3}
                         required
-                        className="border-white/20 bg-black/40 text-white placeholder:text-white/40"
+                        className="border-border bg-background text-foreground"
                       />
                     </div>
 
@@ -313,7 +310,7 @@ const ConsultationForm = () => {
                         onChange={handleChange}
                         placeholder={medical.allergiesPlaceholder}
                         rows={2}
-                        className="border-white/20 bg-black/40 text-white placeholder:text-white/40"
+                        className="border-border bg-background text-foreground"
                       />
                     </div>
 
@@ -326,7 +323,7 @@ const ConsultationForm = () => {
                         onChange={handleChange}
                         placeholder={medical.proceduresPlaceholder}
                         rows={2}
-                        className="border-white/20 bg-black/40 text-white placeholder:text-white/40"
+                        className="border-border bg-background text-foreground"
                       />
                     </div>
 
@@ -338,7 +335,7 @@ const ConsultationForm = () => {
                           name="smokingStatus"
                           value={formData.smokingStatus}
                           onChange={handleChange}
-                          className="w-full rounded-md border border-white/20 bg-black/40 px-3 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-primary"
+                          className="w-full rounded-md border border-border bg-background px-3 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                         >
                           <option value="">{medical.smokingOptions.select}</option>
                           <option value="No">{medical.smokingOptions.no}</option>
@@ -354,7 +351,7 @@ const ConsultationForm = () => {
                           name="alcoholUse"
                           value={formData.alcoholUse}
                           onChange={handleChange}
-                          className="w-full rounded-md border border-white/20 bg-black/40 px-3 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-primary"
+                          className="w-full rounded-md border border-border bg-background px-3 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                         >
                           <option value="">{medical.alcoholOptions.select}</option>
                           <option value="Never">{medical.alcoholOptions.never}</option>
@@ -369,12 +366,12 @@ const ConsultationForm = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-gradient-to-r from-[#f8d88d] to-[#b8802a] text-black shadow-[0_25px_80px_-40px_rgba(248,216,141,1)] hover:scale-[1.02]"
+                    className="w-full bg-primary text-primary-foreground shadow-lg hover:scale-[1.02]"
                   >
                     {t.consultation.form.submitButton}
                   </Button>
 
-                  <p className="text-center text-sm text-white/60">
+                  <p className="text-center text-sm text-muted-foreground">
                     {t.consultation.disclaimer}
                   </p>
                 </form>

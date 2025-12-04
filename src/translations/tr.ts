@@ -6,8 +6,8 @@ export const tr: TranslationKeys = {
         tagline: "Özel Saç Restorasyonu • İstanbul",
         precisionCraft: "Hassas İşçilik",
         luxuryCare: "Lüks Bakım",
-        title: "Beş yıldızlı bakımla doğal görünümlü saç restorasyonu.",
-        description: "Kişiselleştirilmiş greft planlamasından lüks iyileşme süitlerine kadar, HairVante yolculuğunun her detayı zarafet ve konforla güveninizi yeniden kazandırmak için tasarlanmıştır.",
+        title: "Beş yıldızlı bakımla doğal görünümlü saç ve sakal restorasyonu.",
+        description: "Kişiselleştirilmiş greft planlamasından lüks iyileşme süitlerine kadar, HairVante yolculuğunun her detayı zarafet ve konforla güveninizi yeniden kazandırmak için tasarlanmıştır. FUE saç ekimi ve sakal ekimi konusunda uzmanız.",
         whatsappButton: "WhatsApp Danışma",
         packagesButton: "Paketleri Keşfet",
         features: {
