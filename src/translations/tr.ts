@@ -27,7 +27,7 @@ export const tr: TranslationKeys = {
         features: {
             expertise: {
                 title: "Uzman Cerrahi Ekip",
-                description: "Binlerce başarılı prosedürle FUE ve DHI tekniklerinde uzmanlaşmış sertifikalı cerrahlar.",
+                description: "Binlerce başarılı prosedürle gelişmiş saç ekimi tekniklerinde uzmanlaşmış sertifikalı cerrahlar.",
             },
             luxury: {
                 title: "Beş Yıldızlı Deneyim",
@@ -65,7 +65,7 @@ export const tr: TranslationKeys = {
         beforeDescription: "İlk danışma",
         afterDescription: "12 ay sonrası",
         treatmentLabel: "Tedavi",
-        treatmentDescription1: "Bu dönüşüm, doğal ve fark edilmeyen bir saç çizgisi oluşturmak için tek tek foliküllerin özenle çıkarıldığı ve yerleştirildiği hassas FUE tekniğimizi gösterir.",
+        treatmentDescription1: "Bu dönüşüm, doğal ve fark edilmeyen bir saç çizgisi oluşturmak için tek tek foliküllerin özenle çıkarıldığı ve yerleştirildiği hassas tekniğimizi gösterir.",
         treatmentDescription2: "12. aydaki sonuçlar, tam greft tutulumunu ve mevcut saçlarla kusursuz uyumu ortaya koyar.",
         stats: {
             patients: "Mutlu Hasta",
@@ -75,15 +75,15 @@ export const tr: TranslationKeys = {
         },
         transformations: {
             case1: {
-                procedure: "FUE Saç Ekimi",
+                procedure: "Saç Ekimi",
                 grafts: "3.500 Greft",
             },
             case2: {
-                procedure: "FUE Saç Ekimi",
+                procedure: "Saç Ekimi",
                 grafts: "4.000 Greft",
             },
             case3: {
-                procedure: "FUE Saç Ekimi",
+                procedure: "Saç Ekimi",
                 grafts: "3.800 Greft",
             },
         },
@@ -114,7 +114,7 @@ export const tr: TranslationKeys = {
             },
             team: {
                 title: "Uzman Cerrahi Ekip",
-                description: "FUE ve DHI sanatına adanmış cerrahlar",
+                description: "Saç restorasyon sanatına adanmış cerrahlar",
             },
             support: {
                 title: "7/24 Hasta Desteği",
@@ -171,7 +171,7 @@ export const tr: TranslationKeys = {
             },
             procedure: {
                 title: "Prosedür",
-                description: "Son teknoloji kliniğimizde maksimum konfor ve hassasiyetle gerçekleştirilen gelişmiş FUE/DHI tekniği.",
+                description: "Son teknoloji kliniğimizde maksimum konfor ve hassasiyetle gerçekleştirilen gelişmiş saç ekimi tekniği.",
                 duration: "6-8 saat",
             },
             recovery: {
@@ -320,7 +320,7 @@ export const tr: TranslationKeys = {
         },
         services: {
             title: "Hizmetler",
-            fue: "FUE Saç Ekimi",
+            fue: "Saç Ekimi",
             dhi: "DHI Saç Ekimi",
             beard: "Sakal Ekimi",
             eyebrow: "Kaş Ekimi",

@@ -25,7 +25,7 @@ export const en = {
         features: {
             expertise: {
                 title: "Expert Surgical Team",
-                description: "Board-certified surgeons specializing in FUE and DHI techniques with thousands of successful procedures.",
+                description: "Board-certified surgeons specializing in advanced hair transplant techniques with thousands of successful procedures.",
             },
             luxury: {
                 title: "Five-Star Experience",
@@ -63,7 +63,7 @@ export const en = {
         beforeDescription: "Initial consultation",
         afterDescription: "12 months post-procedure",
         treatmentLabel: "Treatment",
-        treatmentDescription1: "This transformation showcases our precision FUE technique, where individual follicles are carefully extracted and strategically placed to create a natural, undetectable hairline.",
+        treatmentDescription1: "This transformation showcases our precision technique, where individual follicles are carefully extracted and strategically placed to create a natural, undetectable hairline.",
         treatmentDescription2: "Results at the 12-month mark highlight complete graft survival and seamless blending with existing hair.",
         stats: {
             patients: "Happy Patients",
@@ -73,15 +73,15 @@ export const en = {
         },
         transformations: {
             case1: {
-                procedure: "FUE Hair Transplant",
+                procedure: "Hair Transplant",
                 grafts: "3,500 Grafts",
             },
             case2: {
-                procedure: "FUE Hair Transplant",
+                procedure: "Hair Transplant",
                 grafts: "4,000 Grafts",
             },
             case3: {
-                procedure: "FUE Hair Transplant",
+                procedure: "Hair Transplant",
                 grafts: "3,800 Grafts",
             },
         },
@@ -112,7 +112,7 @@ export const en = {
             },
             team: {
                 title: "Expert Surgical Team",
-                description: "Surgeons dedicated to FUE & DHI artistry",
+                description: "Surgeons dedicated to hair restoration artistry",
             },
             support: {
                 title: "24/7 Patient Support",
@@ -169,7 +169,7 @@ export const en = {
             },
             procedure: {
                 title: "The Procedure",
-                description: "Advanced FUE/DHI technique performed in our state-of-the-art clinic with maximum comfort and precision.",
+                description: "Advanced hair transplant technique performed in our state-of-the-art clinic with maximum comfort and precision.",
                 duration: "6-8 hours",
             },
             recovery: {
@@ -318,7 +318,7 @@ export const en = {
         },
         services: {
             title: "Services",
-            fue: "FUE Hair Transplant",
+            fue: "Hair Transplant",
             dhi: "DHI Hair Transplant",
             beard: "Beard Transplant",
             eyebrow: "Eyebrow Transplant",
