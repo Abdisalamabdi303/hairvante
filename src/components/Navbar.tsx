@@ -1,15 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/Logo";
 import LanguageToggle from "@/components/LanguageToggle";
 import { useTranslation } from "@/contexts/TranslationContext";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const { t } = useTranslation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { name: t.nav.home, href: "/" },
@@ -22,10 +32,17 @@ const Navbar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <nav
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        isScrolled
+          ? "bg-background/98 shadow-md backdrop-blur-md py-2"
+          : "bg-background/95 backdrop-blur-sm py-4"
+      )}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center">
+        <div className="flex items-center justify-between">
+          <Link to="/" className={cn("flex items-center transition-transform duration-300", isScrolled ? "scale-90" : "scale-100")}>
             <Logo />
           </Link>
 
@@ -35,17 +52,17 @@ const Navbar = () => {
               <Link
                 key={link.href}
                 to={link.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(link.href)
-                    ? "text-primary"
-                    : "text-foreground"
-                }`}
+                className={cn(
+                  "font-medium transition-colors hover:text-primary",
+                  isScrolled ? "text-sm" : "text-base",
+                  isActive(link.href) ? "text-primary" : "text-foreground"
+                )}
               >
                 {link.name}
               </Link>
             ))}
             <LanguageToggle />
-            <Button asChild size="sm" className="bg-primary hover:bg-primary/90">
+            <Button asChild size={isScrolled ? "sm" : "default"} className="bg-primary hover:bg-primary/90 transition-all duration-300">
               <Link to="/contact">{t.nav.getConsultation}</Link>
             </Button>
           </div>
@@ -64,7 +81,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+          <div className="md:hidden py-4 border-t border-border mt-4">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <Link
