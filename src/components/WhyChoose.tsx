@@ -30,9 +30,9 @@ const WhyChoose = () => {
   ];
 
   const stats = [
-    { label: t.whyChoose.statsBlock.stats.procedures, value: "10,000+" },
+    { label: t.whyChoose.statsBlock.stats.procedures, value: "A+" },
     { label: t.whyChoose.statsBlock.stats.satisfaction, value: "98%" },
-    { label: t.whyChoose.statsBlock.stats.years, value: "15+" },
+    { label: t.whyChoose.statsBlock.stats.certified, value: "100%" },
   ];
 
   return (

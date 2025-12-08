@@ -139,6 +139,103 @@ const About = () => {
         </div>
       </section>
 
+      {/* DHI Section */}
+      <section className="py-16 px-4 md:px-8 bg-secondary">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              DHI Hair Transplant Technique
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Direct Hair Implantation (DHI) is the most advanced hair transplantation technique, offering natural results with minimal invasiveness and faster recovery.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-background rounded-xl p-8"
+            >
+              <h3 className="text-2xl font-bold mb-4 text-foreground">What is DHI?</h3>
+              <p className="text-muted-foreground mb-4">
+                DHI (Direct Hair Implantation) is a revolutionary technique that uses a specialized Choi Implanter Pen to extract and implant hair follicles directly without the need for pre-made channels.
+              </p>
+              <p className="text-muted-foreground">
+                This advanced method ensures higher graft survival rates, more precise control over angle and depth, and creates a denser, more natural-looking result.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-background rounded-xl p-8"
+            >
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Why Choose DHI?</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <Shield className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                  <span className="text-muted-foreground">No scalpel or stitches required</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Shield className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                  <span className="text-muted-foreground">Minimal bleeding and faster healing</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Shield className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                  <span className="text-muted-foreground">Higher graft survival rate (95%+)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Shield className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                  <span className="text-muted-foreground">Precise control over hair direction and angle</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Shield className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                  <span className="text-muted-foreground">No need to shave entire head</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Shield className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                  <span className="text-muted-foreground">Shorter recovery time</span>
+                </li>
+              </ul>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-background rounded-xl p-8 text-center"
+          >
+            <h3 className="text-2xl font-bold mb-4 text-foreground">Our DHI Expertise</h3>
+            <p className="text-muted-foreground max-w-3xl mx-auto mb-6">
+              At HairVante, our team of certified surgeons has performed thousands of successful DHI procedures. We combine the precision of DHI technique with sapphire blades for the ultimate hair restoration experience, ensuring natural-looking results that last a lifetime.
+            </p>
+            <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+              <div>
+                <p className="text-4xl font-bold text-primary mb-2">A+</p>
+                <p className="text-sm text-muted-foreground">DHI Excellence</p>
+              </div>
+              <div>
+                <p className="text-4xl font-bold text-primary mb-2">98%</p>
+                <p className="text-sm text-muted-foreground">Success Rate</p>
+              </div>
+              <div>
+                <p className="text-4xl font-bold text-primary mb-2">100%</p>
+                <p className="text-sm text-muted-foreground">Expert Team</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       <Footer />
     </main>
   );

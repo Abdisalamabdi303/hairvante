@@ -165,9 +165,9 @@ export const en = {
             title: "Join Thousands of Satisfied Patients",
             description: "With more than a decade of refinement, HairVante unites medical mastery with hospitality so your entire journey feels effortless.",
             stats: {
-                procedures: "Successful Procedures",
+                procedures: "Excellence Rating",
                 satisfaction: "Patient Satisfaction",
-                years: "Years of Excellence",
+                certified: "Certified Experts",
             },
         },
     },
@@ -189,7 +189,7 @@ export const en = {
         stats: {
             patients: "Happy Patients",
             satisfaction: "Satisfaction Rate",
-            experience: "Years Experience",
+            experience: "Certified Team",
             grafts: "Grafts Transplanted",
         },
         transformations: {

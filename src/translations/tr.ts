@@ -167,9 +167,9 @@ export const tr: TranslationKeys = {
             title: "Binlerce Mutlu Hastaya Katılın",
             description: "On yılı aşkın deneyimle HairVante, tıbbi uzmanlığı misafirperverlikle birleştirerek yolculuğunuzu zahmetsiz kılar.",
             stats: {
-                procedures: "Başarılı Operasyon",
+                procedures: "Mükemmellik Derecesi",
                 satisfaction: "Hasta Memnuniyeti",
-                years: "Yıllık Mükemmellik",
+                certified: "Sertifikalı Uzmanlar",
             },
         },
     },
@@ -189,10 +189,10 @@ export const tr: TranslationKeys = {
         treatmentDescription1: "Bu dönüşüm, doğal ve fark edilmeyen bir saç çizgisi oluşturmak için tek tek foliküllerin özenle çıkarıldığı ve yerleştirildiği hassas tekniğimizi gösterir.",
         treatmentDescription2: "12. aydaki sonuçlar, tam greft tutulumunu ve mevcut saçlarla kusursuz uyumu ortaya koyar.",
         stats: {
-            patients: "Mutlu Hasta",
+            patients: "Mutlu Hastalar",
             satisfaction: "Memnuniyet Oranı",
-            experience: "Yıllık Deneyim",
-            grafts: "Nakledilen Greft",
+            experience: "Sertifikalı Ekip",
+            grafts: "Nakledilen Greftler",
         },
         transformations: {
             case1: {

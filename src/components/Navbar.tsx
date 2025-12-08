@@ -46,16 +46,21 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={cn(
-          "flex items-center",
-          location.pathname === "/" ? "justify-center" : "justify-between"
-        )}>
-          {/* Show logo on all pages except home */}
-          {location.pathname !== "/" && (
-            <Link to="/" className={cn("flex items-center transition-transform duration-300", isScrolled ? "scale-90" : "scale-100")}>
-              <Logo className="w-full max-w-[120px]" />
-            </Link>
-          )}
+        <div className="flex items-center justify-between">
+          {/* Logo - Always visible on mobile, hidden on home page desktop */}
+          <Link
+            to="/"
+            className={cn(
+              "flex items-center transition-transform duration-300",
+              isScrolled ? "scale-90" : "scale-100",
+              location.pathname === "/" ? "md:hidden" : ""
+            )}
+          >
+            <Logo className="w-full max-w-[100px] md:max-w-[120px]" />
+          </Link>
+
+          {/* Spacer for home page desktop to center nav */}
+          {location.pathname === "/" && <div className="hidden md:block" />}
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -78,12 +83,13 @@ const Navbar = () => {
             </Button>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center gap-2">
+          {/* Mobile menu button and language toggle */}
+          <div className="md:hidden flex items-center gap-3">
             <LanguageToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-foreground hover:text-primary transition-colors p-1"
+              aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
