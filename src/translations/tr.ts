@@ -1,6 +1,127 @@
 import { TranslationKeys } from "./en";
 
 export const tr: TranslationKeys = {
+    nav: {
+        home: "Ana Sayfa",
+        about: "Hakkımızda",
+        results: "Sonuçlar",
+        prices: "Fiyatlar",
+        contact: "İletişim",
+        getConsultation: "Danışma Al",
+    },
+    about: {
+        title: "HairVante Hakkında",
+        subtitle: "İstanbul'un kalbinde dünya standartlarında uzmanlık ve kişiselleştirilmiş bakımla premium saç restorasyonunda öncü.",
+        story: {
+            title: "Hikayemiz",
+            p1: "Saç restorasyonunda devrim yaratma vizyonuyla kurulan HairVante, İstanbul'un medikal turizm alanında mükemmelliğin simgesi haline geldi. Son teknoloji tesisimiz, Türk misafirperverliğinin sıcaklığını en ileri teknolojiyle birleştiriyor.",
+            p2: "Her hastanın saç restorasyon yolculuğunda kişiselleştirilmiş bir yaklaşımı hak ettiğine inanıyoruz. Mükemmelliğe olan bağlılığımız, binlerce hastanın özgüvenlerini yeniden kazanmasına ve hayatlarını dönüştürmesine yardımcı oldu.",
+        },
+        team: {
+            title: "Uzman Medikal Ekip",
+            p1: "Ekibimiz, saç nakli alanında onlarca yıllık deneyime sahip yüksek eğitimli cerrahlar ve sağlık profesyonellerinden oluşmaktadır. Her üye, en yüksek bakım standardını sunmaya kendini adamıştır.",
+            p2: "Hastalarımızın mevcut en gelişmiş tedavileri almasını sağlamak için sürekli olarak eğitime ve en son tekniklere yatırım yapıyoruz.",
+        },
+        valuesTitle: "Temel Değerlerimiz",
+        values: {
+            excellence: {
+                title: "Mükemmellik",
+                description: "Gerçekleştirdiğimiz her prosedürde mükemmelliğe ulaşmak için çalışıyoruz.",
+            },
+            patientCare: {
+                title: "Hasta Bakımı",
+                description: "Konforunuz ve memnuniyetiniz en büyük önceliğimizdir.",
+            },
+            compassion: {
+                title: "Şefkat",
+                description: "Yolculuğunuzu anlıyor ve her adımda sizi destekliyoruz.",
+            },
+            trust: {
+                title: "Güven",
+                description: "Şeffaflık ve dürüstlükle kalıcı ilişkiler kuruyoruz.",
+            },
+        },
+    },
+    resultsPage: {
+        title: "Öncesi ve Sonrası Sonuçlar",
+        subtitle: "Hastalarımızın elde ettiği dikkat çekici dönüşümleri görün. Gerçek insanlardan gerçek sonuçlar.",
+        before: "Öncesi",
+        after: "Sonrası",
+        grafts: "Greft",
+        ctaTitle: "Dönüşümünüze Hazır mısınız?",
+        ctaDescription: "Kişiselleştirilmiş tedavi planınızı görüşmek için ücretsiz danışma randevusu alın.",
+        ctaButton: "Danışma Randevusu Al",
+    },
+    pricesPage: {
+        title: "Şeffaf Fiyatlandırma",
+        subtitle: "Gizli maliyet olmadan size en iyi değeri sunmak için tasarlanmış her şey dahil paketler.",
+        mostPopular: "En Popüler",
+        getQuote: "Teklif Al",
+        includesTitle: "Tüm Paketler Dahildir",
+        includesDescription: "Siz dönüşümünüze odaklanabilmeniz için her şeyi biz hallediyoruz.",
+        includes: {
+            airport: "Havaalanı Transferleri",
+            hotel: "Otel Konaklaması",
+            medication: "Ameliyat Sonrası İlaçlar",
+            followup: "12 Ay Takip",
+        },
+        packages: {
+            essential: {
+                name: "Temel",
+                description: "Küçük işlemler için ideal",
+                features: {
+                    f1: "2.500 grefte kadar",
+                    f2: "FUE tekniği",
+                    f3: "2 gece otel konaklaması",
+                    f4: "Havaalanı transferleri",
+                    f5: "Ameliyat sonrası bakım kiti",
+                },
+            },
+            premium: {
+                name: "Premium",
+                description: "En popüler seçimimiz",
+                features: {
+                    f1: "4.000 grefte kadar",
+                    f2: "Safir FUE tekniği",
+                    f3: "3 gece lüks otel",
+                    f4: "VIP havaalanı transferleri",
+                    f5: "Premium bakım kiti",
+                    f6: "PRP tedavisi dahil",
+                },
+            },
+            vip: {
+                name: "VIP Elite",
+                description: "Ultimate deneyim",
+                features: {
+                    f1: "Sınırsız greft",
+                    f2: "DHI + Safir FUE",
+                    f3: "5 gece 5 yıldızlı otel",
+                    f4: "Özel araç hizmeti",
+                    f5: "Lüks bakım paketi",
+                    f6: "3 PRP seansı",
+                    f7: "Kişisel hasta koordinatörü",
+                },
+            },
+        },
+    },
+    contact: {
+        title: "Bize Ulaşın",
+        subtitle: "Dönüşümünüze başlamaya hazır mısınız? Ücretsiz danışma için ekibimizle iletişime geçin.",
+        location: {
+            title: "Konum",
+            details: "İstanbul, Türkiye",
+        },
+        phone: {
+            title: "Telefon",
+        },
+        email: {
+            title: "E-posta",
+        },
+        hours: {
+            title: "Çalışma Saatleri",
+            details: "Pzt - Cmt: 09:00 - 18:00",
+        },
+    },
     // Hero Bölümü
     hero: {
         tagline: "Özel Saç Restorasyonu • İstanbul",
@@ -299,7 +420,7 @@ export const tr: TranslationKeys = {
             notSpecified: "Belirtilmedi",
             none: "Yok",
         },
-        disclaimer: "Bu formu göndererek HairVante’in sizinle WhatsApp, e-posta veya telefon aracılığıyla iletişime geçmesini kabul etmiş olursunuz.",
+        disclaimer: "Bu formu göndererek HairVante'in sizinle WhatsApp, e-posta veya telefon aracılığıyla iletişime geçmesini kabul etmiş olursunuz.",
         success: "Teşekkürler! 24 saat içinde sizinle iletişime geçeceğiz.",
         successNote: "Ekibimiz en kısa sürede WhatsApp üzerinden size ulaşacak.",
         error: "Bir şeyler yanlış gitti. Lütfen tekrar deneyin veya WhatsApp üzerinden bizimle iletişime geçin.",

@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import WhyChoose from "@/components/WhyChoose";
 import Packages from "@/components/Packages";
@@ -8,7 +9,8 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-[#050505] text-white">
+    <main className="min-h-screen bg-background text-foreground">
+      <Navbar />
       <Hero />
       <WhyChoose />
       <Results />
