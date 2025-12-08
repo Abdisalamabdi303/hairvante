@@ -106,7 +106,7 @@ const Process = () => {
             </p>
             <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
               <a
-                href="https://wa.me/905438611089"
+                href="https://wa.me/905431293599"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-primary px-10 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition hover:scale-105"

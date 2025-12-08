@@ -31,20 +31,31 @@ const Navbar = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  const handleWhatsAppClick = () => {
+    const message = encodeURIComponent(t.common.whatsappMessage);
+    window.open(`https://wa.me/905431293599?text=${message}`, "_blank");
+  };
+
   return (
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-background/98 shadow-md backdrop-blur-md py-2"
-          : "bg-background/95 backdrop-blur-sm py-4"
+          ? "bg-background/98 shadow-md backdrop-blur-md py-1.5"
+          : "bg-background/95 backdrop-blur-sm py-3"
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          <Link to="/" className={cn("flex items-center transition-transform duration-300", isScrolled ? "scale-90" : "scale-100")}>
-            <Logo />
-          </Link>
+        <div className={cn(
+          "flex items-center",
+          location.pathname === "/" ? "justify-center" : "justify-between"
+        )}>
+          {/* Show logo on all pages except home */}
+          {location.pathname !== "/" && (
+            <Link to="/" className={cn("flex items-center transition-transform duration-300", isScrolled ? "scale-90" : "scale-100")}>
+              <Logo className="w-full max-w-[120px]" />
+            </Link>
+          )}
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -62,8 +73,8 @@ const Navbar = () => {
               </Link>
             ))}
             <LanguageToggle />
-            <Button asChild size={isScrolled ? "sm" : "default"} className="bg-primary hover:bg-primary/90 transition-all duration-300">
-              <Link to="/contact">{t.nav.getConsultation}</Link>
+            <Button onClick={handleWhatsAppClick} size={isScrolled ? "sm" : "default"} className="bg-primary hover:bg-primary/90 transition-all duration-300">
+              {t.nav.getConsultation}
             </Button>
           </div>
 
@@ -88,19 +99,16 @@ const Navbar = () => {
                   key={link.href}
                   to={link.href}
                   onClick={() => setIsOpen(false)}
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
-                    isActive(link.href)
-                      ? "text-primary"
-                      : "text-foreground"
-                  }`}
+                  className={`text-sm font-medium transition-colors hover:text-primary ${isActive(link.href)
+                    ? "text-primary"
+                    : "text-foreground"
+                    }`}
                 >
                   {link.name}
                 </Link>
               ))}
-              <Button asChild size="sm" className="w-fit bg-primary hover:bg-primary/90">
-                <Link to="/contact" onClick={() => setIsOpen(false)}>
-                  {t.nav.getConsultation}
-                </Link>
+              <Button onClick={handleWhatsAppClick} size="sm" className="w-fit bg-primary hover:bg-primary/90">
+                {t.nav.getConsultation}
               </Button>
             </div>
           </div>

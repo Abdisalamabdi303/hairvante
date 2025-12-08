@@ -9,6 +9,10 @@ import client2Before from "@/assets/client2-before.jpg";
 import client2After from "@/assets/client2-after.jpg";
 import client3Before from "@/assets/client3-before.jpg";
 import client3After from "@/assets/client3-after.jpg";
+import client4Before from "@/assets/client4-before.jpg";
+import client4After from "@/assets/client4-after.jpg";
+import client5Before from "@/assets/client5-before.jpg";
+import client5After from "@/assets/client5-after.jpg";
 
 const Results = () => {
   const { t } = useTranslation();
@@ -19,14 +23,14 @@ const Results = () => {
       after: clientAfter,
       name: "Client A",
       grafts: "3,500",
-      procedure: "FUE Hair Transplant",
+      procedure: "Hair Transplant",
     },
     {
       before: client2Before,
       after: client2After,
       name: "Client B",
       grafts: "4,200",
-      procedure: "FUE Hair Transplant",
+      procedure: "Hair Transplant",
     },
     {
       before: client3Before,
@@ -35,14 +39,28 @@ const Results = () => {
       grafts: "2,800",
       procedure: "Beard Transplant",
     },
+    {
+      before: client4Before,
+      after: client4After,
+      name: "Client D",
+      grafts: "3,800",
+      procedure: "Hair Transplant",
+    },
+    {
+      before: client5Before,
+      after: client5After,
+      name: "Client E",
+      grafts: "4,500",
+      procedure: "Hair Transplant",
+    },
   ];
 
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Navbar />
-      
+
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 md:px-8 bg-secondary">
+      <section className="pt-64 pb-16 px-4 md:px-8 bg-secondary">
         <div className="max-w-6xl mx-auto text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}

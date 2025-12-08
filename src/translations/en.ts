@@ -1,125 +1,125 @@
 export const en = {
-  nav: {
-    home: "Home",
-    about: "About",
-    results: "Results",
-    prices: "Prices",
-    contact: "Contact",
-    getConsultation: "Get Consultation",
-  },
-  about: {
-    title: "About HairVante",
-    subtitle: "Leading the way in premium hair restoration with world-class expertise and personalized care in the heart of Istanbul.",
-    story: {
-      title: "Our Story",
-      p1: "Founded with a vision to revolutionize hair restoration, HairVante has become a beacon of excellence in Istanbul's medical tourism landscape. Our state-of-the-art facility combines cutting-edge technology with the warmth of Turkish hospitality.",
-      p2: "We believe that every patient deserves a personalized approach to their hair restoration journey. Our commitment to excellence has helped thousands of patients regain their confidence and transform their lives.",
+    nav: {
+        home: "Home",
+        about: "About",
+        results: "Results",
+        prices: "Prices",
+        contact: "Contact",
+        getConsultation: "Get Consultation",
     },
-    team: {
-      title: "Expert Medical Team",
-      p1: "Our team consists of highly trained surgeons and medical professionals with decades of combined experience in hair transplantation. Each member is dedicated to providing the highest standard of care.",
-      p2: "We continuously invest in training and the latest techniques to ensure our patients receive the most advanced treatments available.",
-    },
-    valuesTitle: "Our Core Values",
-    values: {
-      excellence: {
-        title: "Excellence",
-        description: "Striving for perfection in every procedure we perform.",
-      },
-      patientCare: {
-        title: "Patient Care",
-        description: "Your comfort and satisfaction are our top priorities.",
-      },
-      compassion: {
-        title: "Compassion",
-        description: "Understanding your journey and supporting you every step.",
-      },
-      trust: {
-        title: "Trust",
-        description: "Building lasting relationships through transparency and integrity.",
-      },
-    },
-  },
-  resultsPage: {
-    title: "Before & After Results",
-    subtitle: "See the remarkable transformations achieved by our patients. Real results from real people.",
-    before: "Before",
-    after: "After",
-    grafts: "Grafts",
-    ctaTitle: "Ready for Your Transformation?",
-    ctaDescription: "Schedule a free consultation to discuss your personalized treatment plan.",
-    ctaButton: "Book Consultation",
-  },
-  pricesPage: {
-    title: "Transparent Pricing",
-    subtitle: "All-inclusive packages designed to give you the best value with no hidden costs.",
-    mostPopular: "Most Popular",
-    getQuote: "Get Quote",
-    includesTitle: "All Packages Include",
-    includesDescription: "We take care of everything so you can focus on your transformation.",
-    includes: {
-      airport: "Airport Transfers",
-      hotel: "Hotel Accommodation",
-      medication: "Post-Op Medications",
-      followup: "12-Month Follow-up",
-    },
-    packages: {
-      essential: {
-        name: "Essential",
-        description: "Perfect for smaller procedures",
-        features: {
-          f1: "Up to 2,500 grafts",
-          f2: "FUE technique",
-          f3: "2 nights hotel stay",
-          f4: "Airport transfers",
-          f5: "Post-operative care kit",
+    about: {
+        title: "About HairVante",
+        subtitle: "Leading the way in premium hair restoration with world-class expertise and personalized care in the heart of Istanbul.",
+        story: {
+            title: "Our Story",
+            p1: "Founded with a vision to revolutionize hair restoration, HairVante has become a beacon of excellence in Istanbul's medical tourism landscape. Our state-of-the-art facility combines cutting-edge technology with the warmth of Turkish hospitality.",
+            p2: "We believe that every patient deserves a personalized approach to their hair restoration journey. Our commitment to excellence has helped thousands of patients regain their confidence and transform their lives.",
         },
-      },
-      premium: {
-        name: "Premium",
-        description: "Our most popular choice",
-        features: {
-          f1: "Up to 4,000 grafts",
-          f2: "Sapphire FUE technique",
-          f3: "3 nights luxury hotel",
-          f4: "VIP airport transfers",
-          f5: "Premium care kit",
-          f6: "PRP treatment included",
+        team: {
+            title: "Expert Medical Team",
+            p1: "Our team consists of highly trained surgeons and medical professionals with decades of combined experience in hair transplantation. Each member is dedicated to providing the highest standard of care.",
+            p2: "We continuously invest in training and the latest techniques to ensure our patients receive the most advanced treatments available.",
         },
-      },
-      vip: {
-        name: "VIP Elite",
-        description: "The ultimate experience",
-        features: {
-          f1: "Unlimited grafts",
-          f2: "DHI + Sapphire FUE",
-          f3: "5 nights 5-star hotel",
-          f4: "Private car service",
-          f5: "Luxury care package",
-          f6: "3 PRP sessions",
-          f7: "Personal patient coordinator",
+        valuesTitle: "Our Core Values",
+        values: {
+            excellence: {
+                title: "Excellence",
+                description: "Striving for perfection in every procedure we perform.",
+            },
+            patientCare: {
+                title: "Patient Care",
+                description: "Your comfort and satisfaction are our top priorities.",
+            },
+            compassion: {
+                title: "Compassion",
+                description: "Understanding your journey and supporting you every step.",
+            },
+            trust: {
+                title: "Trust",
+                description: "Building lasting relationships through transparency and integrity.",
+            },
         },
-      },
     },
-  },
-  contact: {
-    title: "Contact Us",
-    subtitle: "Ready to start your transformation? Get in touch with our team for a free consultation.",
-    location: {
-      title: "Location",
-      details: "Istanbul, Turkey",
+    resultsPage: {
+        title: "Before & After Results",
+        subtitle: "See the remarkable transformations achieved by our patients. Real results from real people.",
+        before: "Before",
+        after: "After",
+        grafts: "Grafts",
+        ctaTitle: "Ready for Your Transformation?",
+        ctaDescription: "Schedule a free consultation to discuss your personalized treatment plan.",
+        ctaButton: "Book Consultation",
     },
-    phone: {
-      title: "Phone",
+    pricesPage: {
+        title: "Transparent Pricing",
+        subtitle: "All-inclusive packages designed to give you the best value with no hidden costs.",
+        mostPopular: "Most Popular",
+        getQuote: "Get Quote",
+        includesTitle: "All Packages Include",
+        includesDescription: "We take care of everything so you can focus on your transformation.",
+        includes: {
+            airport: "Airport Transfers",
+            hotel: "Hotel Accommodation",
+            medication: "Post-Op Medications",
+            followup: "12-Month Follow-up",
+        },
+        packages: {
+            essential: {
+                name: "Essential",
+                description: "Perfect for smaller procedures",
+                features: {
+                    f1: "Up to 2,500 grafts",
+                    f2: "Modern technique",
+                    f3: "2 nights hotel stay",
+                    f4: "Airport transfers",
+                    f5: "Post-operative care kit",
+                },
+            },
+            premium: {
+                name: "Premium",
+                description: "Our most popular choice",
+                features: {
+                    f1: "Up to 4,000 grafts",
+                    f2: "Sapphire technique",
+                    f3: "3 nights luxury hotel",
+                    f4: "VIP airport transfers",
+                    f5: "Premium care kit",
+                    f6: "PRP treatment included",
+                },
+            },
+            vip: {
+                name: "VIP Elite",
+                description: "The ultimate experience",
+                features: {
+                    f1: "Unlimited grafts",
+                    f2: "DHI + Sapphire",
+                    f3: "5 nights 5-star hotel",
+                    f4: "Private car service",
+                    f5: "Luxury care package",
+                    f6: "3 PRP sessions",
+                    f7: "Personal patient coordinator",
+                },
+            },
+        },
     },
-    email: {
-      title: "Email",
+    contact: {
+        title: "Contact Us",
+        subtitle: "Ready to start your transformation? Get in touch with our team for a free consultation.",
+        location: {
+            title: "Location",
+            details: "Istanbul, Turkey",
+        },
+        phone: {
+            title: "Phone",
+        },
+        email: {
+            title: "Email",
+        },
+        hours: {
+            title: "Working Hours",
+            details: "Mon - Sat: 9AM - 6PM",
+        },
     },
-    hours: {
-      title: "Working Hours",
-      details: "Mon - Sat: 9AM - 6PM",
-    },
-  },
     // Hero Section
     hero: {
         tagline: "Bespoke Hair Restoration • Istanbul",

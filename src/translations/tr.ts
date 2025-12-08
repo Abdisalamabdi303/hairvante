@@ -71,7 +71,7 @@ export const tr: TranslationKeys = {
                 description: "Küçük işlemler için ideal",
                 features: {
                     f1: "2.500 grefte kadar",
-                    f2: "FUE tekniği",
+                    f2: "Modern teknik",
                     f3: "2 gece otel konaklaması",
                     f4: "Havaalanı transferleri",
                     f5: "Ameliyat sonrası bakım kiti",
@@ -82,7 +82,7 @@ export const tr: TranslationKeys = {
                 description: "En popüler seçimimiz",
                 features: {
                     f1: "4.000 grefte kadar",
-                    f2: "Safir FUE tekniği",
+                    f2: "Safir tekniği",
                     f3: "3 gece lüks otel",
                     f4: "VIP havaalanı transferleri",
                     f5: "Premium bakım kiti",
@@ -94,7 +94,7 @@ export const tr: TranslationKeys = {
                 description: "Ultimate deneyim",
                 features: {
                     f1: "Sınırsız greft",
-                    f2: "DHI + Safir FUE",
+                    f2: "DHI + Safir",
                     f3: "5 gece 5 yıldızlı otel",
                     f4: "Özel araç hizmeti",
                     f5: "Lüks bakım paketi",
