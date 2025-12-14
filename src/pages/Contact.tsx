@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ConsultationForm from "@/components/ConsultationForm";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 import { useTranslation } from "@/contexts/TranslationContext";
 
 const Contact = () => {
@@ -23,6 +23,12 @@ const Contact = () => {
       icon: Mail,
       title: t.contact.email.title,
       details: "info@hairvante.com",
+    },
+    {
+      icon: Instagram,
+      title: "Instagram",
+      details: "@hairvante",
+      link: "https://www.instagram.com/hairvante?igsh=NTZ2dGR6enJvbWdy"
     },
     {
       icon: Clock,
@@ -61,20 +67,33 @@ const Contact = () => {
       <section className="py-16 px-4 md:px-8 bg-background">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-6 mb-16">
-            {contactInfo.map((info, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center p-6 rounded-xl bg-secondary"
-              >
-                <info.icon className="w-10 h-10 text-primary mx-auto mb-4" />
-                <h3 className="font-semibold mb-2 text-foreground">{info.title}</h3>
-                <p className="text-sm text-muted-foreground">{info.details}</p>
-              </motion.div>
-            ))}
+            {contactInfo.map((info, index) => {
+              const Wrapper = info.link ? 'a' : 'div';
+              const props = info.link ? {
+                href: info.link,
+                target: "_blank",
+                rel: "noopener noreferrer",
+                className: "block text-center p-6 rounded-xl bg-secondary transition-transform hover:scale-105 cursor-pointer"
+              } : {
+                className: "text-center p-6 rounded-xl bg-secondary"
+              };
+
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <Wrapper {...props}>
+                    <info.icon className="w-10 h-10 text-primary mx-auto mb-4" />
+                    <h3 className="font-semibold mb-2 text-foreground">{info.title}</h3>
+                    <p className="text-sm text-muted-foreground">{info.details}</p>
+                  </Wrapper>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>

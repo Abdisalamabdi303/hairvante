@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 import Logo from "@/components/Logo";
 import { useTranslation } from "@/contexts/TranslationContext";
 
@@ -78,6 +78,15 @@ const Footer = () => {
               >
                 <Mail className="h-4 w-4" />
                 {t.footer.contact.email}
+              </a>
+              <a
+                href="https://www.instagram.com/hairvante?igsh=NTZ2dGR6enJvbWdy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 transition-colors hover:text-primary"
+              >
+                <Instagram className="h-4 w-4" />
+                <span>Instagram</span>
               </a>
               <div className="flex items-start gap-2">
                 <MapPin className="mt-1 h-4 w-4 flex-shrink-0" />

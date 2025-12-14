@@ -5,4 +5,6 @@ export { ru } from "./ru";
 export { de } from "./de";
 export { ar } from "./ar";
 export { nl } from "./nl";
+export { it } from "./it";
+export { es } from "./es";
 export type { TranslationKeys } from "./en";

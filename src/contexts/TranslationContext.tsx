@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
-import { en, tr, fr, ru, de, ar, nl, TranslationKeys } from "@/translations";
+import { en, tr, fr, ru, de, ar, nl, it, es, TranslationKeys } from "@/translations";
 
-type Language = "en" | "tr" | "fr" | "ru" | "de" | "ar" | "nl";
+type Language = "en" | "tr" | "fr" | "ru" | "de" | "ar" | "nl" | "it" | "es";
 
 interface TranslationContextType {
     language: Language;
@@ -19,12 +19,14 @@ const translations: Record<Language, TranslationKeys> = {
     de,
     ar,
     nl,
+    it,
+    es,
 };
 
 export const TranslationProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [language, setLanguageState] = useState<Language>(() => {
         const saved = localStorage.getItem("language");
-        return (saved === "en" || saved === "tr" || saved === "fr" || saved === "ru" || saved === "de" || saved === "ar" || saved === "nl") ? saved as Language : "en";
+        return (saved === "en" || saved === "tr" || saved === "fr" || saved === "ru" || saved === "de" || saved === "ar" || saved === "nl" || saved === "it" || saved === "es") ? saved as Language : "en";
     });
 
     const setLanguage = (lang: Language) => {

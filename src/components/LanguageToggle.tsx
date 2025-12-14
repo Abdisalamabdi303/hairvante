@@ -15,6 +15,8 @@ const LanguageToggle = () => {
         { code: "de", label: "Deutsch", flag: "🇩🇪" },
         { code: "ar", label: "العربية", flag: "🇸🇦" },
         { code: "nl", label: "Nederlands", flag: "🇳🇱" },
+        { code: "it", label: "Italiano", flag: "🇮🇹" },
+        { code: "es", label: "Español", flag: "🇪🇸" },
     ] as const;
 
     const currentLang = languages.find(lang => lang.code === language) || languages[0];
